@@ -26,7 +26,7 @@ export default function FrontPage() {
                 src={image}
                 width='250'
                 height='180'
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', borderRadius: '15px' }}
               />
             </div>
           ))}
