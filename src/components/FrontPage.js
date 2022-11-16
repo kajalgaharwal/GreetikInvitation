@@ -13,12 +13,6 @@ import Image7 from '../assets/7.jpeg';
 const Images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7];
 
 export default function FrontPage() {
-  // var audio = new Audio('/src/assets/song.mp3');
-  // const Playit = () => {
-  //   audio.play().catch();
-  // };
-  // useEffect(() => Playit(), []);
-
   return (
     <div className='container'>
       <div className='imgCarousalBox'>
@@ -40,6 +34,7 @@ export default function FrontPage() {
           ))}
         </Carousel>
       </div>
+
       <div className='data'>
         <p> Please join us at the </p>
         <h3>Blessing</h3>

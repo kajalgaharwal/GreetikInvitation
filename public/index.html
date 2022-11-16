@@ -5,25 +5,84 @@
     <!-- <link rel="icon" type="image/x-icon" href="/src/assets/2.jpeg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="webeekajal"
-      content="Webeekajal--kajal gaharwal, front end developer"
-    />
     <title>Deval`s Invitation</title>
+    <style>
+      .button {
+        position: absolute;
+        top: 50px;
+        left: 46%;
+        color: crimson;
+        text-decoration: none;
+        display: inline-block;
+        border: 2px solid white;
+        border-radius: 1000px;
+        padding: 10px 20px;
+        margin: 10px;
+        box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.15);
+        transition: 0.5s all ease-in-out;
+      }
+      .button:hover {
+        cursor: pointer;
+        background: white;
+        color: #1f4141;
+        animation: none;
+      }
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid white;
+        transition: border 0.3s;
+      }
+      a:hover {
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+      }
+      .button-pulse {
+        animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+        box-shadow: 0 0 0 0 white;
+      }
+      @keyframes pulse {
+        to {
+          box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .button {
+          position: absolute;
+          top: 50px;
+          left: 37%;
+        }
+      }
+
+      @media only screen and (min-width: 600px) and (max-width: 768px) {
+        .button {
+          position: absolute;
+          top: 50px;
+          left: 37%;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        .button {
+          position: absolute;
+          top: 50px;
+          left: 37%;
+        }
+      }
+    </style>
   </head>
   <body>
-    <noscript>You need to enable javascript to run this</noscript>
     <div id="root"></div>
-    <!-- <iframe
-      src="./song.mp3"
-      allow="autoplay"
-      style="display:none"
-      id="iframeAudio"
-    >
-    </iframe> -->
     <audio src="./song.mp3" id="my_audio" loop="loop" autoplay muted></audio>
     <script defer type="text/javascript">
       const audio = document.getElementById('my_audio');
+      var btn = document.createElement('a');
+      btn.innerHTML = 'Tuned With Us';
+      btn.classList = 'button button-pulse';
+      var t = btn.setAttribute('href', '#');
+      document.body.appendChild(btn);
+
+      btn.onclick = function() {
+        audio.muted = false;
+        audio.play();
+      };
       window.onscroll = function() {
         audio.muted = false;
         audio.play();
@@ -31,7 +90,3 @@
     </script>
   </body>
 </html>
-
-<!-- const button = document.createElement('button'); -->
-<!-- button.innerText = 'Play';
-document.body.appendChild(button); -->
