@@ -15,8 +15,9 @@ export default function FrontPage() {
     <div className='container'>
       <div className='imgCarousalBox'>
         <Carousel
-          height={320}
-          width={900}
+          className='carousalBox'
+          height={300}
+          width={800}
           yOrigin={42}
           yRadius={48}
           autoPlay={true}>
@@ -24,8 +25,7 @@ export default function FrontPage() {
             <div key={index}>
               <img
                 src={image}
-                width='250'
-                height='180'
+                className='carousalImgs'
                 style={{ objectFit: 'cover', borderRadius: '15px' }}
               />
             </div>

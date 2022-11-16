@@ -17,7 +17,14 @@ body {
   justify-content: center;
   padding-top: 7rem;
 }
-
+/* .carousalBox {
+  height: 300px;
+  width: 800px;
+} */
+.carousalImgs {
+  height: 180px;
+  width: 250px;
+}
 .data {
   text-align: center;
   font-size: 1.6rem;
@@ -34,6 +41,14 @@ body {
     font-size: 1.1rem;
     padding-bottom: 4rem;
   }
+  .carousalBox {
+    height: 100%;
+    width: 180%;
+  }
+  .carousalImgs {
+    height: 180px;
+    width: 180px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
@@ -45,6 +60,14 @@ body {
     font-size: 1.3rem;
     padding-bottom: 4rem;
   }
+  .carousalBox {
+    height: 100%;
+    width: 180%;
+  }
+  .carousalImgs {
+    height: 180px;
+    width: 180px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -55,5 +78,13 @@ body {
   .data {
     font-size: 1.5rem;
     padding-bottom: 4rem;
+  }
+  .carousalBox {
+    height: 100%;
+    width: 180%;
+  }
+  .carousalImgs {
+    height: 180px;
+    width: 180px;
   }
 }
