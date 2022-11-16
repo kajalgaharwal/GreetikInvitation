@@ -12,10 +12,26 @@
     <title>Deval`s Invitation</title>
   </head>
   <body>
-    <noscript
-      >webeekajal--My name is kajal gaharwal and i am front end
-      developer</noscript
-    >
+    <noscript>You need to enable javascript to run this</noscript>
     <div id="root"></div>
+    <!-- <iframe
+      src="./song.mp3"
+      allow="autoplay"
+      style="display:none"
+      id="iframeAudio"
+    >
+    </iframe> -->
+    <audio src="./song.mp3" id="my_audio" loop="loop" autoplay muted></audio>
+    <script defer type="text/javascript">
+      const audio = document.getElementById('my_audio');
+      window.onscroll = function() {
+        audio.muted = false;
+        audio.play();
+      };
+    </script>
   </body>
 </html>
+
+<!-- const button = document.createElement('button'); -->
+<!-- button.innerText = 'Play';
+document.body.appendChild(button); -->
